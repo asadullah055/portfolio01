@@ -20,12 +20,12 @@ document.querySelectorAll('a').forEach(links =>{
 
     links.onmouseenter = () =>{
         coursor1.classList.add('active');
-        coursor1.classList.add('active');
+        coursor2.classList.add('active');
     }
 
     links.onmouseleave = () =>{
         coursor1.classList.remove('active');
-        coursor1.classList.remove('active');
+        coursor2.classList.remove('active');
     }
 
 });

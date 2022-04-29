@@ -51,7 +51,7 @@ body{
 }
 .list{
     list-style: none;
-
+    position: relative;
 }
 .list a{
     display: block;
@@ -59,19 +59,59 @@ body{
     color: #fff;
     margin: 2rem 0;
 }
-.list a:hover{
-    letter-spacing: .2rem;
+.name{
+    position: relative;
+    /* top: 20px; */
+    height: 100%;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+.name span{
+    display: block;
+    position: relative;
+    line-height: 20px;
+    transition: .5s;
+}
+.name span::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 100%;
+}
+.list a:hover .name span{
+    transform: translateY(-100%);
+    letter-spacing: .1rem;
     color: var(--main-color);
 }
+
 .list-f{
     list-style: none;
     float: left;
 }
-
+.icon{
+    width: 60px;
+    height: 40px;
+    text-align: center;
+    overflow: hidden;
+}
+.icon .fab{
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+.icon .fab:last-child{
+    color: var(--main-color);
+}
 .list-f a{
     font-size: 2.5rem;
     color: #fff;
     margin: 0.6rem;
+}
+.list-f a:hover .icon .fab{
+    transform: translateY(-100%);
+}
+.list-f a:hover .icon .fab:last-child{
+    transform: translateY(-100%);
 }
 #menu-bars{
     position: fixed;
@@ -120,7 +160,6 @@ body{
 .cursor-2.active{
     display: none;
 }
-
 
 
 
