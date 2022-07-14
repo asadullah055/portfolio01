@@ -6,10 +6,10 @@ menu.onclick = () => {
   menu.classList.toggle("fa-times");
   header.classList.toggle("active");
 };
-window.onscroll = () => {
-  menu.classList.toggle("fa-times");
-  header.classList.toggle("active");
-};
+// window.onscroll = () => {
+//   menu.classList.toggle("fa-times");
+//   header.classList.toggle("active");
+// };
 window.onmousemove = (e) => {
   coursor1.style.top = e.pageY + "px";
   coursor1.style.left = e.pageX + "px";
